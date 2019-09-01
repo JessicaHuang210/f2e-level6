@@ -1,0 +1,34 @@
+.home {
+  position: relative;
+  padding-top: 15rem;
+  .slider {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    &__item {
+      width: 100%;
+      height: 66rem;
+
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+  }
+  .logo-white {
+    margin: auto;
+    // margin-top: 15.5rem;
+  }
+  .info {
+    margin-top: 5rem;
+    animation: fadeIn 1s;
+
+    @include flex(center);
+    &__contact{
+        margin-left: 3rem;
+        padding-left: 3rem;
+        border-left:1px solid $color-white;
+    }
+  }
+  .rooms{
+    animation: moveBottomIn .8s ease-out .2s both;
+  }
+}

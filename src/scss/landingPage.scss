@@ -1,0 +1,109 @@
+$menu-width: 30rem;
+.landing-page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $color-grey-light;
+  background-image: url("https://images.unsplash.com/photo-1519974719765-e6559eac2575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .logo-white {
+    position: absolute;
+    top: 6.5rem;
+    left: 6.5rem;
+  }
+  .menu {
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    display: inline-block;
+    padding: 50px 35px;
+    min-width: $menu-width;
+    background-color: $color-white;
+    letter-spacing: 1.5px;
+    animation: moveRightIn .8s ease-out both;
+    &:after {
+      position: absolute;
+      bottom: -20px;
+      display: block;
+      width: $menu-width;
+      height: 20px;
+      content: "";
+
+      @include lineBg;
+    }
+    &__item {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      &__link {
+        color: $color-black;
+        font-size: 14px;
+        line-height: 40px;
+      }
+      &::before {
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        margin-left: -35px;
+        width: 0;
+        height: 1px;
+        background-color: $color-black;
+        content: "";
+        transition: all 0.2s ease-out;
+      }
+      &:hover {
+        @include linkHover;
+        &::before {
+          width: 20px;
+        }
+      }
+    }
+  }
+  .info {
+    position: absolute;
+    right: 0;
+    bottom: 7.5rem;
+    display: inline-block;
+    padding: 0px 35px;
+    min-width: $menu-width;
+    animation: moveRightIn .8s ease-out 0.3s both;
+  }
+  .room {
+    position: absolute;
+    bottom: 7.5rem;
+    left: 5rem;
+    color: $color-white;
+    animation: fadeIn .8s ease-out .5s both;
+    &__num {
+      font-weight: 700;
+      font-size: 6.6rem;
+      &::after {
+        display: block;
+        margin: -2.5rem 0 0 -0.7rem;
+        width: 8.5rem;
+        height: 2rem;
+        content: "";
+
+        @include lineBg;
+      }
+    }
+    &__title {
+      letter-spacing: 2.5px;
+      font-size: 2.4rem;
+    }
+    &.active {
+      .room__num,
+      .room__title {
+        animation: fadeIn 1s;
+      }
+    }
+  }
+}
