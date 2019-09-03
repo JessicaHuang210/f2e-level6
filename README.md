@@ -1,5 +1,7 @@
 # f2e-level6
 
+(即時預覽)[https://jessicahuang210.github.io/f2e-level6/dist/#/]
+
 ## Project setup
 ```
 yarn install
