@@ -4,17 +4,23 @@
     <div class="overlay"></div>
 
     <!-- 左上角Logo -->
-    <div class="logo-white">
+    <router-link :to="{ name: 'Home' }" class="logo-white">
       <span class="logo-white__text">
         White
         <br />Space
       </span>
-    </div>
+    </router-link>
 
     <!-- 選單 -->
     <ul class="menu">
-      <li :key="i.num" @mouseenter="changeRoom(i)" @mouseleave="leave" class="menu__item" v-for="i in rooms">
-        <a class="menu__item__link" href="#">{{i.title}}</a>
+      <li
+        :key="i.num"
+        @mouseenter="changeRoom(i)"
+        @mouseleave="leave"
+        class="menu__item"
+        v-for="i in rooms"
+      >
+        <a class="menu__item__link" href="#">{{ i.title }}</a>
       </li>
     </ul>
 
@@ -22,29 +28,44 @@
     <div class="info">
       <div class="info__social u__mb--5">
         <a href="#">
-          <font-awesome-icon class="icon info__icon" :icon="['fab','facebook-square']"/>
+          <font-awesome-icon
+            class="icon info__icon"
+            :icon="['fab', 'facebook-square']"
+          />
         </a>
         <a href="#">
-          <font-awesome-icon class="icon info__icon" :icon="['fab','instagram']" />
+          <font-awesome-icon
+            class="icon info__icon"
+            :icon="['fab', 'instagram']"
+          />
         </a>
       </div>
       <div class="info__contact">
         <a class="info__contact__item" href="#">
-          <font-awesome-icon class="icon info__icon" icon="phone-alt" />02-17264937
+          <font-awesome-icon
+            class="icon info__icon"
+            icon="phone-alt"
+          />02-17264937
         </a>
         <a class="info__contact__item" href="#">
-          <font-awesome-icon class="icon info__icon" icon="envelope" />whitespace@whitespace.com.tw
+          <font-awesome-icon
+            class="icon info__icon"
+            icon="envelope"
+          />whitespace@whitespace.com.tw
         </a>
         <a class="info__contact__item" href="#">
-          <font-awesome-icon class="icon info__icon" icon="home" />台北市羅斯福路十段30號
+          <font-awesome-icon
+            class="icon info__icon"
+            icon="home"
+          />台北市羅斯福路十段30號
         </a>
       </div>
     </div>
 
     <!-- 房間資訊 -->
-    <div :class="{active:isActive}" class="room">
-      <div class="room__num u__mb--1">{{hoverNum}}</div>
-      <h2 class="room__title">{{hoverTitle}}</h2>
+    <div :class="{ active: isActive }" class="room">
+      <div class="room__num u__mb--1">{{ hoverNum }}</div>
+      <h2 class="room__title">{{ hoverTitle }}</h2>
     </div>
   </div>
 </template>
@@ -79,4 +100,3 @@ export default {
   }
 };
 </script>
-

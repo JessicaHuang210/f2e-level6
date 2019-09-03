@@ -11,12 +11,11 @@
     width: calc((100% - 4rem) / 3);
     background-color: $color-grey-light;
     box-shadow: 2px 2px 9px 0 rgba(0, 0, 0, 0.18);
-    transition: all 0.2s;
+    transition: transform 0.2s ease-in-out;
     &:not(:nth-child(3n)) {
       margin-right: $gutter;
     }
     &:hover {
-      transform: scale(1.02);
       .rooms__box__content {
         transform: translateY(-50%);
       }

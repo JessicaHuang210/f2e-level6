@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <router-view />
+    <transition name="blur" mode="out-in">
+      <router-view />
+    </transition>
   </div>
 </template>
-<style lang="scss" src="./scss/main.scss"></style>

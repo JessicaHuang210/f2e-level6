@@ -9,6 +9,7 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import "./scss/main.scss";
 
 library.add(fab, fas, far);
 

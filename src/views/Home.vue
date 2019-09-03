@@ -9,12 +9,12 @@
       <div class="overlay"></div>
     </div>
 
-    <div class="logo-white">
+    <router-link :to="{ name: 'LandingPage' }" class="logo-white">
       <span class="logo-white__text">
         White
         <br />Space
       </span>
-    </div>
+    </router-link>
 
     <div class="info u__mb--10">
       <div class="info__social">
